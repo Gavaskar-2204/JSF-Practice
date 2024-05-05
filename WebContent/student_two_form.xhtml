@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+	<title>Student Registration Form</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		First Name:<h:inputText id="firstName" value="#{studentTwo.firstName}">
+		</h:inputText>
+		<br />
+		<br /> Last Name:
+<h:inputText id="lastName" value="#{studentTwo.lastName}"></h:inputText>
+		<br />
+		<br /> Country:
+	<h:selectOneMenu value="#{studentTwo.country}">
+			<f:selectItems value="#{studentTwo.countryList}" />
+		</h:selectOneMenu>
+
+
+
+		<!-- <h:selectOneMenu value="#{studentTwo.country}">
+			<f:selectItem  itemLabel="Select a Country" itemValue=""
+				itemDisabled="true" />
+			<f:selectItem itemValue="USA" itemLabel="United States" />
+			<f:selectItem itemValue="Brazil" itemLabel="brazil" />
+			<f:selectItem itemValue="Canada" itemLabel="canada" />
+			<f:selectItem itemValue="Mizoram" itemLabel="mizoram" />
+			<f:selectItem itemValue="UK" itemLabel="united kingdom" />
+			<f:selectItem itemValue="Australia" itemLabel="australia" />
+		</h:selectOneMenu> -->
+		<br />
+		<br />
+		<h:commandButton value="Submit" action="student_two_response"></h:commandButton>
+	</h:form>
+
+</h:body>
+
+</html>
